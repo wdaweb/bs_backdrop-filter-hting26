@@ -8,16 +8,77 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/bootstrap.css">
   <style>
-    
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: url("https://picsum.photos/1920/1080/?random=1") fixed center/cover;
+    }
+
+    .col-12:first-child {
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .col-12:last-child {
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    @media(min-width:768px) {
+      .col-12 {
+        width: 400px;
+      }
+
+      .col-12:first-child {
+        border-radius: 1rem 0 0 1rem;
+      }
+
+      .col-12:last-child {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
   </style>
 </head>
 
 <body>
-<div class="container">
-  <img src="https://picsum.photos/1080/1080/?random=1" class="d-block w-100" alt="...">
-
-  
-</div>
+  <div class="container-fluid p-5 text-white h-100">
+    <div class="row flex-column flex-md-row flex-nowrap h-100 text-center ">
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5" style="font-size:40px">
+        <h1>backdrop-filter效果</h1>
+      </div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5">backdrop-filter: none</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: grayscale(1);">backdrop-filter:grayscale(1)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: brightness(1.5);">
+        backdrop-filter:brightness(1.5)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: blur(5px);">backdrop-filter:
+        blur(5px)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: contrast(0.8);">
+        backdrop-filter: contrast(0.8)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: invert(0.7);">backdrop-filter:
+        invert(0.7)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: opacity(0.4);">backdrop-filter:
+        opacity(0.4)
+      </div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: sepia(0.4);">backdrop-filter:
+        sepia(0.4)</div>
+      <div class="col-12 border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: saturate(1.8);">
+        backdrop-filter: saturate(1.8)
+      </div>
+      <div class="col-12  border d-flex justify-content-center align-items-center p-5 my-md-5"
+        style="backdrop-filter: hue-rotate(120deg);">
+        backdrop-filter:
+        hue-rotate(120deg)</div>
+    </div>
+  </div>
   <script src="./js/bootstrap.bundle.js"></script>
 
 </body>
